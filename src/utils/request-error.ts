@@ -5,9 +5,10 @@ class RequestError implements ErrorWithCode {
     message: string;
     name: string;
 
-    constructor(message: string, errorCode: number, err?: Error) {
+    constructor(message: string, errorCode: number, err?: Error, name?: string) {
         this.code = errorCode;
         this.message = message;
+        this.name = name ?? "Error";
         // If err is passed, it will be logged on the console
         if ( err ) {
             console.log("\n")

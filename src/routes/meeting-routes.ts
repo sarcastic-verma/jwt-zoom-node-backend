@@ -3,6 +3,6 @@ import { createMeeting } from "../controllers/meeting-controller";
 
 const router = express.Router();
 
-router.post('/create', createMeeting);
+router.get('/create', createMeeting);
 
 export default router;
